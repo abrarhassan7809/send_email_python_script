@@ -12,11 +12,12 @@ def send_email(host, port, subject, msg, sender, receiver, password):
     smtp_server.sendmail(sender, receiver, msg.as_string())
 
     smtp_server.quit()
+    print('successfully sent email')
 
 
 def main(sender, receiver, app_password):
     host = "smtp.gmail.com"
-    port = 535  # or 465
+    port = 465  # or 535
 
     user = sender
     pwd = app_password
@@ -29,4 +30,4 @@ def main(sender, receiver, app_password):
 
 
 if __name__ == '__main__':
-    main('bdmsystm@gmail.com', 'abrarhassan7809@gmail.com', 'asim1234')
+    main('abrarhassan7809@gmail.com', 'bdmsystm@gmail.com', 'uqhuruzookcypxxf')
